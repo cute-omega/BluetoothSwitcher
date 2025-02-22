@@ -22,7 +22,7 @@ public class BluetoothClientService {
 
     public static void main(String[] argv) {
 
-        final String serverUUID = "1000110100001000800000805F9B34FB"; //需要与服务端相同
+        final String serverUUID = "1000111230001000800000805F9B34FB"; //需要与服务端相同
 
         BluetoothClient client = new BluetoothClient();
 
