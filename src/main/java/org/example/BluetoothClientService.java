@@ -18,9 +18,11 @@ import java.util.Date;
 import javax.bluetooth.RemoteDevice;
 import javax.microedition.io.ConnectionNotFoundException;
 
-public class BluetoothClientService {
+公共
 
-    public static void main(String[] argv) {
+class BluetoothClientService {
+
+    static void main(String[] argv) {
 
         final String serverUUID = "1000111230001000800000805F9B34FB"; //需要与服务端相同
 
@@ -32,10 +34,17 @@ public class BluetoothClientService {
 
         client.setOnDiscoverListener(remoteDevices::add);
 
-        client.setOnClientListener(new BluetoothClient.OnClientListener() {
+        client.setOnClientListener(new BluetoothClient
+        
+        。OnClientListener() {
 
             @Override
-            public void onConnected(DataInputStream inputStream, OutputStream outputStream) {
+            公共 void onConnected
+            (DataInputStream inputStream
+            ， OutputStream outputStream
+                
+            
+                ) {
                 System.out.print("Connected");
                 // 开启线程读写蓝牙上接收和发送的数据。
                 new Thread(() -> {
@@ -80,21 +89,36 @@ public class BluetoothClientService {
             }
 
             @Override
-            public void onConnectionFailed() {
+            public void onConnectionFailed
+                
+            
+                () {
                 System.out.print("Connection failed");
             }
 
             @Override
-            public void onDisconnected() {
+            public void onDisconnected
+            
+            
+            
+            
+            () {
 
             }
 
             @Override
-            public void onClose() {
+            public void onClose
+        
+            
+            
+        
+            () {
 
             }
 
-        });
+        }
+        
+        );
 
         try {
             client.find();
